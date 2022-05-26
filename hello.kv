@@ -1,0 +1,93 @@
+#:kivy 1.11
+MDScreen:
+    #middle image
+    Image: 
+        source: 'greeting.png'
+        size_hint: .5, .5
+        opacity: .5
+        pos_hint: {'x': .25, 'y': .5}
+        halign: 'center'
+    #logo on left top
+    MDFloatLayout:
+        Image:
+            source:"slope.png"
+            size_hint: .1, .1
+            pos_hint: {"center_x": .1, "center_y": .95}
+    #set the changing text screen
+    MDFloatLayout:
+        size_hint: .5, .5
+        MDLabel:
+            pos_hint: {"x": .5, "y": .5}
+            id: text1
+            text: "Hello"
+            halign: "center"
+            font_name: "Calibri"
+            bold: True
+            font_size: "40sp"
+            opacity: 0
+        MDLabel:
+            pos_hint: {"x": .5, "y": .5}
+            id: text2
+            text: "Holla"
+            halign: "center"
+            font_name: "Calibri"
+            bold: True
+            font_size: "40sp"
+            opacity: 0
+        MDLabel:
+            pos_hint: {"x": .5, "y": .5}
+            id: text3
+            text: "Bonjour"
+            halign: "center"
+            font_name: "Calibri"
+            bold: True
+            font_size: "40sp"
+            opacity: 0
+        MDLabel:
+            pos_hint: {"x": .5, "y": .5}
+            id: text4
+            text: "Halo"
+            halign: "center"
+            font_name: "Calibri"
+            bold: True
+            font_size: "40sp"
+            opacity: 0
+
+    MDLabel:
+        text: "W E L C O M E"
+        font_name: 'Calibri'
+        font_size: "20sp"
+        bold: True
+        size_hint_x: .85
+        pos_hint: {"center_x": .5 ,"center_y": .3}
+        halign: "center"
+        color: rgba(127, 127, 127, 255)
+    MDLabel:
+        text: "User Interface Prototype Made by Adnan Bayu"
+        font_name: 'Calibri'
+        font_size: "13sp"
+        size_hint_x: .85
+        pos_hint: {"center_x": .5 ,"center_y": .25}
+        halign: "center"
+        color: rgba(127, 127, 127, 255)
+    #set the login button
+    Button:
+        text: 'LOGIN'
+        background_color: .52, 0, 2.31, 1
+        size_hint: .5, .05
+        pos_hint: {'x': .25, 'y': .15}
+        font_name: 'calibri'
+        bold: True
+        canvas.before:
+            Color:
+                rgb: rgba(52, 0, 231, 255)
+            RoundedRectangle:
+                size: self.size
+                pos: self.pos
+                radius: [5]
+    MDLabel:
+        text: "created in 2022"
+        font_name: 'Calibri'
+        font_size: '8sp'
+        pos_hint: {"center_x": .5 ,"center_y": .01}
+        halign: 'center'
